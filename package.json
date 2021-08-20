@@ -1,0 +1,22 @@
+{
+  "name": "curriculum_vitae",
+  "version": "1.0.0",
+  "description": "Make your curriculum vitae",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://nachodiba210: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@github.com/ucudal/PW_2021_Website-nachodiba210.git"
+  },
+  "keywords": [
+    "123456"
+  ],
+  "author": "Ignacio Dibarrart",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ucudal/PW_2021_Website-nachodiba210/issues"
+  },
+  "homepage": "https://github.com/ucudal/PW_2021_Website-nachodiba210#readme"
+}
