@@ -1,54 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-blue-400">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="row_col.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <title>Curriculum Vitae</title>
 </head>
 <body>
-    <div class="container">
-        <div class="d-flex justify-content-between">
-            <div class="p-3 d-flex">
-                <span class="i-circle img-margin">i</span>
-                <h4 class="p-3">Ignacio <b class="font-weight-100">Dibarrart</b></h4>
+    <div class="container bg-white mx-auto my-8 rounded-3xl h-100">
+        <div class="flex justify-between p-6">
+            <div class="p-8 ml-4 flex">
+                <span class="rounded-full bg-blue-400 px-11 py-6 text-white text-5xl">i</span>
+                <h4 class="p-8 text-xl">Ignacio <b class="font-weight-100">Dibarrart</b></h4>
             </div>
-            <div class="d-flex px-3">
-                <h5 class="px-3 py-5 text-grey">About me</h5>
-                <h5 class="px-3 py-5 text-grey">Portfolio</h5>
-                <h5 class="px-3 py-5 text-grey">Contact</h5>
+            <div class="flex p-8">
+                <h5 class="px-4 py-8 text-gray-400 text-lg">About me</h5>
+                <h5 class="px-4 py-8 text-gray-400 text-lg">Portfolio</h5>
+                <h5 class="px-4 py-8 text-gray-400 text-lg">Contact</h5>
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-6 d-flex justify-content-center">
-                <img src="../img/profile_picture.jpeg" class="profile-img-size" alt="Profile Picture" />
+        <div class="grid grid-rows-3 grid-flow-col gap-4 m-8">
+            <div class="row-span-3 flex justify-center">
+                <img src="../img/profile_picture.jpeg" class="rounded-full h-80 w-80 shadow-2xl border-8" alt="Profile Picture" />
             </div>
-            <div class="col-6 d-flex justify-content-start">
+            <div class="row-span-3 flex justify-start">
                 <div>
-                    <h4 class="text-grey">Full Stack Developer</h4>
-                    <h1>Ignacio Dibarrart</h1>
-                    <p class="small">Something something something</p>
+                    <h4 class="text-gray-400 text-lg">Full Stack Developer</h4>
+                    <h1 class="text-3xl pb-6">Ignacio Dibarrart</h1>
+                    <p class="text-md">Something something something</p>
                 </div>
             </div>
         </div>
 
-        <div class="m-5">
-            <h3 class="text-line">What I Do</h3>
-            <div class="row">
-                <div class="col-6 text-center">
-                    <h1>EJEMPL</h1>
+        <div class="p-10">
+            <h3 class="text-3xl underline pb-10">Studies</h3>
+            <div class="grid grid-flow-row grid-row-2 gap-4">
+                <div class="grid grid-flow-col grid-col-2 gap-4">
+                    <div class="w-80">
+                        <h1 class="text-xl font-bold">Universidad Catolica del Uruguay</h1>
+                        <p class="text-lg pl-6 text-grey-400">2018 ~ Present</p>
+                        <p class="text-md pl-6 text-grey-300">Estudiante de Ingenieria en computacion, cursando el 4to año.</p>
+                        <div class="grid grid-flow-col gird-col-2 gap-4">
+                            <ul class="list-disc pl-16">
+                                <li>Python</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                            </ul>
+                            <ul class="list-disc pl-16">
+                                <li>C#</li>
+                                <li>Java</li>
+                                <li>C</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="w-80">
+                        <h1 class="text-xl font-bold">University Of West London</h1>
+                        <p class="text-lg pl-6 text-grey-400">2017 ~ 2018</p>
+                        <p class="text-md pl-6 text-grey-300">Estudie Computer Engineer 1 año en Londres</p>
+                        <ul class="list-disc pl-16">
+                            <li>Blockly</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="col-6 text-center">
-                    <h1>EJEMPL</h1>
-                </div>
-                <div class="col-6 text-center">
-                    <h1>EJEMPL</h1>
-                </div>
-                <div class="col-6 text-center">
-                    <h1>EJEMPL</h1>
+                <div class="grid grid-flow-col grid-col-2 gap-4">
+                    <div class="w-80">
+                        <h1 class="text-xl font-bold">Santa Rita</h1>
+                        <p class="text-lg pl-6 text-grey-400">2015 ~ 2016</p>
+                        <p class="text-md pl-6 text-grey-300">Termine Liceo orientacion Ingenieria</p>
+                    </div>
+                    <div class="w-80">
+                        <h1 class="text-xl font-bold">Bachillerato Naval</h1>
+                        <p class="text-lg pl-6 text-grey-400">2014 ~ 2015</p>
+                        <p class="text-md pl-6 text-grey-300">Estudiante 5to cientifico en la escuela Naval.</p>
+                        <ul class="list-disc pl-16">
+                            <li>Enseñanza en equipo</li>
+                            <li>Respeto</li>
+                            <li>Correctitud</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

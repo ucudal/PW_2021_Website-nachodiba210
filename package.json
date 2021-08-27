@@ -4,7 +4,8 @@
   "description": "Make your curriculum vitae",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test"
+    "test": "npm run test",
+    "start": "browser-sync start --server --serveStatic 'docs' --files '**/*.html, **/*.css'"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/ucudal/PW_2021_Website-nachodiba210/issues"
   },
-  "homepage": "https://github.com/ucudal/PW_2021_Website-nachodiba210#readme"
+  "homepage": "https://github.com/ucudal/PW_2021_Website-nachodiba210#readme",
+  "dependencies": {
+    "browser-sync": "^2.27.5"
+  }
 }
