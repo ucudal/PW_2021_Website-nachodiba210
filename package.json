@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run test",
-    "start": "browser-sync start --server --serveStatic 'docs' --files '**/*.html, **/*.css'"
+    "start": "browser-sync start --server --serveStatic 'docs' --files '**/*'",
+    "tailwind": "npx tailwindcss -i ./src/tailwind.css -o ./docs/style.css --jit",
+    "tailwind:watch": "npm run tailwind -- --watch"
   },
   "repository": {
     "type": "git",
@@ -21,6 +23,8 @@
   },
   "homepage": "https://github.com/ucudal/PW_2021_Website-nachodiba210#readme",
   "dependencies": {
-    "browser-sync": "^2.27.5"
+    "@tailwindcss/typography": "^0.4.1",
+    "browser-sync": "^2.27.5",
+    "tailwindcss": "^2.2.11"
   }
 }
