@@ -5,20 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
+    <script src="script.min.js"></script>
     <title>Curriculum Vitae</title>
 </head>
 <body>
-    <div class="container bg-white mx-auto my-8 rounded-3xl h-100">
+    <!-- Main Page Start -->
+    <div class="container bg-white mx-auto my-8 rounded-3xl h-100 box-height">
         <div class="flex justify-between p-6">
             <div class="p-8 ml-4 flex">
                 <a class="rounded-full bg-blue-400 px-11 py-6 text-white text-5xl" href="index.html">i</a>
                 <h4 class="p-8 text-xl">Ignacio <b class="font-weight-100">Dibarrart</b></h4>
             </div>
             <div class="flex p-8">
-                <a class="px-4 py-8 text-gray-400 text-lg" href="about_me.html">About me</a>
-                <a class="px-4 py-8 text-gray-400 text-lg" href="studies.html">Studies</a>
-                <a class="px-4 py-8 text-gray-400 text-lg" href="portfolio.html">Portfolio</a>
-                <a class="px-4 py-8 text-gray-400 text-lg" href="contact_me.html">Contact</a>
+                <button class="px-4 py-8 text-gray-400 text-lg" onclick="toggleModal('modal-id')">About me</button>
+                <button class="px-4 py-8 text-gray-400 text-lg" onclick="toggleModal('studie-modal-id')">Studies</button>
+                <button class="px-4 py-8 text-gray-400 text-lg" onclick="toggleModal('portfolio-modal-id')">Portfolio</button>
+                <button class="px-4 py-8 text-gray-400 text-lg" onclick="toggleModal('contact-me-modal-id')">Contact</button>
             </div>
         </div>
 
@@ -35,5 +37,174 @@
             </div>
         </div>
     </div>
+    <!-- Main Page Finish -->
+
+
+    <!-- Studies Modal Start -->
+    <div class="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center" id="studie-modal-id">
+        <div class="relative w-auto my-6 mx-auto max-w-3xl">
+            <div class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                <div class="p-10">
+                    <h3 class="text-3xl underline pb-10">Studies</h3>
+                    <div class="grid grid-flow-row grid-row-2 gap-4">
+                        <div class="grid grid-flow-col grid-col-2 gap-4">
+                            <div class="w-80">
+                                <h1 class="text-xl font-bold">Universidad Catolica del Uruguay</h1>
+                                <p class="text-lg pl-6 text-grey-400">2018 ~ Present</p>
+                                <p class="text-md pl-6 text-grey-300">Estudiante de Ingenieria en computacion, cursando el 4to año.</p>
+                                <div class="grid grid-flow-col gird-col-2 gap-4">
+                                    <ul class="list-disc pl-16">
+                                        <li>Python</li>
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                    </ul>
+                                    <ul class="list-disc pl-16">
+                                        <li>C#</li>
+                                        <li>Java</li>
+                                        <li>C</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="w-80">
+                                <h1 class="text-xl font-bold">University Of West London</h1>
+                                <p class="text-lg pl-6 text-grey-400">2017 ~ 2018</p>
+                                <p class="text-md pl-6 text-grey-300">Estudie Computer Engineer 1 año en Londres</p>
+                                <ul class="list-disc pl-16">
+                                    <li>Blockly</li>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="grid grid-flow-col grid-col-2 gap-4">
+                            <div class="w-80">
+                                <h1 class="text-xl font-bold">Santa Rita</h1>
+                                <p class="text-lg pl-6 text-grey-400">2015 ~ 2016</p>
+                                <p class="text-md pl-6 text-grey-300">Termine Liceo orientacion Ingenieria</p>
+                            </div>
+                            <div class="w-80">
+                                <h1 class="text-xl font-bold">Bachillerato Naval</h1>
+                                <p class="text-lg pl-6 text-grey-400">2014 ~ 2015</p>
+                                <p class="text-md pl-6 text-grey-300">Estudiante 5to cientifico en la escuela Naval.</p>
+                                <ul class="list-disc pl-16">
+                                    <li>Enseñanza en equipo</li>
+                                    <li>Respeto</li>
+                                    <li>Correctitud</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
+                    <button class="text-blue-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button" onclick="toggleModal('studie-modal-id')">
+                    Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hidden opacity-25 fixed inset-0 z-40 bg-black" id="studie-modal-id-backdrop"></div>
+    <!-- Studie Modal Finish -->
+
+    <!-- Porfolio Modal Start -->
+    <div class="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center" id="portfolio-modal-id">
+        <div class="relative w-auto my-6 mx-auto max-w-3xl">
+            <div class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                <div class="p-10">
+                    <h3 class="text-3xl underline pb-10">Portfolio</h3>
+                    <div class="grid grid-flow-row grid-row-2 gap-4">
+                        <div class="grid grid-flow-col grid-col-2 gap-4">
+                            <div class="w-80">
+                                <h1 class="text-xl font-bold">Parroquia Santa Rita</h1>
+                                <p class="text-lg pl-6 text-grey-400">2014 ~ 2016</p>
+                                <p class="text-md pl-6 text-grey-300">Animador de niños</p>
+                                <div class="grid grid-flow-col gird-col-2 gap-4">
+                                    <ul class="list-disc pl-16">
+                                        <li>Liderazgo</li>
+                                        <li>Equipo</li>
+                                        <li>Control de masas</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="w-80">
+                                <h1 class="text-xl font-bold">EagerWorks</h1>
+                                <p class="text-lg pl-6 text-grey-400">2020 ~ present</p>
+                                <p class="text-md pl-6 text-grey-400">Full Stack Developer</p>
+                                <p class="text-md pl-6 text-grey-300">Empresa de software dedicada a crear software a medida para empresas extranjeras y locales. Su foco principal es la creacion de applicaciones web y mobiles y el lenguaje de uso es Ruby</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
+                    <button class="text-blue-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button" onclick="toggleModal('portfolio-modal-id')">
+                    Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hidden opacity-25 fixed inset-0 z-40 bg-black" id="portfolio-modal-id-backdrop"></div>
+    <!-- Portfolio Modal Finish -->
+
+    <!-- Contact Me Modal Start -->
+    <div class="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center" id="contact-me-modal-id">
+        <div class="relative w-auto my-6 mx-auto max-w-3xl">
+            <div class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                <form class="w-full max-w-lg p-10">
+                    <div class="flex flex-wrap -mx-3 mb-6">
+                        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+                                Nombre
+                            </label>
+                            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Jane">
+                        </div>
+                        <div class="w-full md:w-1/2 px-3">
+                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+                                Apellido
+                            </label>
+                            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe">
+                        </div>
+                        <div class="w-full md:w-1/2 px-3">
+                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+                                Celular
+                            </label>
+                            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="phone2numeric">
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap -mx-3 mb-6">
+                        <div class="w-full px-3">
+                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+                                E-mail
+                            </label>
+                            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="email" type="email">
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap -mx-3 mb-6">
+                        <div class="w-full px-3">
+                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+                                Mensaje
+                            </label>
+                            <textarea class=" no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none" id="message"></textarea>
+                        </div>
+                    </div>
+                    <div class="md:flex md:items-center">
+                        <div class="md:w-2/3"></div>
+                    </div>
+                </form>
+                <div class="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
+                    <button class="shadow bg-blue-400 hover:bg-blue-200 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
+                        Enviar
+                    </button>
+                    <button class="text-blue-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button" onclick="toggleModal('contact-me-modal-id')">
+                    Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hidden opacity-25 fixed inset-0 z-40 bg-black" id="contact-me-modal-id-backdrop"></div>
+    <!-- Contact Me Modal Finish -->
 </body>
 </html>
+
+
