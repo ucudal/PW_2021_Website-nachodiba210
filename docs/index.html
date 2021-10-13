@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="script.min.js"></script>
     <title>Curriculum Vitae</title>
 </head>
@@ -17,9 +18,9 @@
                 <h4 class="p-8 text-xl">Ignacio <b class="font-weight-100">Dibarrart</b></h4>
             </div>
             <div class="flex p-8">
-                <button class="px-4 py-8 text-gray-400 text-lg" onclick="toggleModal('modal-id')">About me</button>
+                <button class="px-4 py-8 text-gray-400 text-lg" onclick="toggleModal('about-me-modal-id')">About me</button>
                 <button class="px-4 py-8 text-gray-400 text-lg" onclick="toggleModal('studie-modal-id')">Studies</button>
-                <button class="px-4 py-8 text-gray-400 text-lg" onclick="toggleModal('portfolio-modal-id')">Portfolio</button>
+                <button class="px-4 py-8 text-gray-400 text-lg" onclick="toggleModal('portfolio-modal-id')">Trabajos</button>
                 <button class="px-4 py-8 text-gray-400 text-lg" onclick="toggleModal('contact-me-modal-id')">Contact</button>
             </div>
         </div>
@@ -30,14 +31,57 @@
             </div>
             <div class="row-span-3 flex justify-start">
                 <div>
-                    <h4 class="text-gray-400 text-lg">Full Stack Developer</h4>
-                    <h1 class="text-3xl pb-6">Ignacio Dibarrart</h1>
-                    <p class="text-md">Something something something</p>
+                    <h1 class="text-gray-400 text-5xl text-center pb-20">Welcome to my Curriculum</h1>
+                    <div class="grid grid-flow-row grid-row-2 gap-4">
+                        <div class="grid grid-flow-col grid-col-2 gap-4">
+                            <div class="row-span-3 rounded-full h-60 w-60 shadow-xl border-2 bg-blue-400 pl-20">
+                                <a class="fa fa-book fa-2x pt-10 pl-5"></a>
+                                <p class="pt-15">Innovacion</p>
+                            </div>
+                            <div class="row-span-3 rounded-full h-60 w-60 shadow-xl border-2 bg-blue-400 pl-20">
+                                <a class="fa fa-diamond fa-2x pt-10 pl-5"></a>
+                                <p class="pt-15">Calidad</p>
+                            </div>
+                            <div class="row-span-3 rounded-full h-60 w-60 shadow-xl border-2 bg-blue-400 pl-20">
+                                <a class="fa fa-plane fa-2x pt-10 pl-5"></a>
+                                <p class="pt-15">Rapidez</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="fixed right-60 bottom-10">
+            <a href="https://www.facebook.com/nacho.dibarrart" class="fa fa-facebook fa-2x p-2" target="_blank"></a>
+            <a href="https://github.com/nachodiba210" class="fa fa-github fa-2x p-2" target="_blank"></a>
+            <a href="https://www.linkedin.com/in/ignacio-dibarrart-990697161/" class="fa fa-linkedin fa-2x p-2" target="_blank"></a>
+        </div>
+    </div>
+    <!-- Main Page Finish -->
+
+    <!-- About Me Modal Start -->
+    <div class="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center" id="about-me-modal-id">
+        <div class="relative w-auto my-6 mx-auto max-w-3xl">
+            <div class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                <div class="p-10">
+                    <h3 class="text-3xl underline pb-10">Acerca de Mi</h3>
+                    <div class="grid grid-flow-row grid-row-2 gap-4">
+                        <p>
+                            Soy un estudiante de ingenieria en sistemas en la Universidad Catolica del Uruguay. Estoy cursando 4to año de la carrera guiandome por la rama de ingenieria de software. Soy una persona pacionada con la creacion de applicaciones tanto web como mobile, hace mas de 1 año que trabajo para lo que me gusta y dia a dia me gusta aprender cosas nuevas.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
+                    <button class="text-blue-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button" onclick="toggleModal('about-me-modal-id')">
+                    Close
+                    </button>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Main Page Finish -->
+    <div class="hidden opacity-25 fixed inset-0 z-40 bg-black" id="about-me-modal-id-backdrop"></div>
+    <!-- About Me Modal Finish -->
 
 
     <!-- Studies Modal Start -->
@@ -111,7 +155,7 @@
         <div class="relative w-auto my-6 mx-auto max-w-3xl">
             <div class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                 <div class="p-10">
-                    <h3 class="text-3xl underline pb-10">Portfolio</h3>
+                    <h3 class="text-3xl underline pb-10">Trabajos</h3>
                     <div class="grid grid-flow-row grid-row-2 gap-4">
                         <div class="grid grid-flow-col grid-col-2 gap-4">
                             <div class="w-80">
