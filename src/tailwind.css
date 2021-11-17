@@ -5,3 +5,19 @@
 .box-height {
   min-height: 1000px;
 }
+
+@media (max-width: 500px) {
+  .hide-picture-max500px {
+    display: none;
+  }
+
+  .content-center-500px {
+    justify-content: center !important;
+  }
+}
+
+@media (min-width: 500px) {
+  .hide-picture-min500px {
+    display: none;
+  }
+}

@@ -87,9 +87,8 @@ document.addEventListener("submit", function(event) {
       'Content-Type': 'application/json'
       },
   }).then((response) => {
-    console.log(response);
-  }).then((html) => {
-    console.log(html);
+    toggleModal("contact-me-modal-id");
+    toggleModal("success-modal-id");
   }).catch((error) => {
     console.error(error);
   });

@@ -74,9 +74,8 @@ document.addEventListener("submit", function (event) {
             'Content-Type': 'application/json'
         }
     }).then(function (response) {
-        console.log(response);
-    }).then(function (html) {
-        console.log(html);
+        toggleModal("contact-me-modal-id");
+        toggleModal("success-modal-id");
     })["catch"](function (error) {
         console.error(error);
     });
