@@ -35,6 +35,7 @@ function populate_portfolio(lista_experiencias) {
   // Crear div con la empresa y su info adentro
   const div = document.createElement("div");
   div.classList.add("w-80");
+
   if (lista_experiencias["experiencia_laboral"]) {
     lista_experiencias["experiencia_laboral"].forEach(experiencia => {
       // Crear empresa
@@ -54,7 +55,7 @@ function populate_portfolio(lista_experiencias) {
 
       // Crear Fecha Inicio y fin
       const inicio_fin = document.createElement("p");
-      inicio_fin.textContent = experiencia.fechaInicio + "~" + experiencia.fechaFin;
+      inicio_fin.textContent = experiencia.fecha_inicio + "~" + experiencia.fecha_fin;
       inicio_fin.classList.add("text-lg", "pl-6", "text-grey-300");
 
       div.appendChild(empresa);

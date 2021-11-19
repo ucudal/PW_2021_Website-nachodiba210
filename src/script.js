@@ -12,6 +12,7 @@ function get_experiencia_laboral() {
     request.open("get", "https://PW2021-APINode-nachodiba210.nachodiba.repl.co/experiencia-laboral", true);
     request.onload = function () {
         try {
+            console.log(request.responseText);
             var json = JSON.parse(request.responseText);
             populate_portfolio(json);
         }
@@ -46,7 +47,7 @@ function populate_portfolio(lista_experiencias) {
             puesto.classList.add("text-lg", "pl-6", "text-grey-400");
             // Crear Fecha Inicio y fin
             var inicio_fin = document.createElement("p");
-            inicio_fin.textContent = experiencia.fechaInicio + "~" + experiencia.fechaFin;
+            inicio_fin.textContent = experiencia.fecha_inicio + "~" + experiencia.fecha_fin;
             inicio_fin.classList.add("text-lg", "pl-6", "text-grey-300");
             div.appendChild(empresa);
             div.appendChild(descripcion);
