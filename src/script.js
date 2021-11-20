@@ -12,7 +12,6 @@ function get_experiencia_laboral() {
     request.open("get", "https://PW2021-APINode-nachodiba210.nachodiba.repl.co/experiencia-laboral", true);
     request.onload = function () {
         try {
-            console.log(request.responseText);
             var json = JSON.parse(request.responseText);
             populate_portfolio(json);
         }
