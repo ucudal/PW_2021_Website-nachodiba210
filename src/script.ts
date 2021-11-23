@@ -36,8 +36,8 @@ function populate_portfolio(lista_experiencias) {
   const div = document.createElement("div");
   div.classList.add("w-80");
 
-  if (lista_experiencias["experiencia_laboral"]) {
-    lista_experiencias["experiencia_laboral"].forEach(experiencia => {
+  if (lista_experiencias["experiencia-laboral"]) {
+    lista_experiencias["experiencia-laboral"].forEach(experiencia => {
       // Crear empresa
       const empresa = document.createElement("p");
       empresa.textContent = experiencia.empresa;
@@ -80,7 +80,7 @@ document.addEventListener("submit", function(event) {
 
   const jsonString = JSON.stringify(toSend);
 
-  const url = "https://PW2021-APINode-nachodiba210-2.nachodiba.repl.co/enviar-formulario";
+  const url = "https://PW2021-APINode-nachodiba210.nachodiba.repl.co/enviar-formulario";
   fetch(url, {
       method : "POST",
       body: jsonString,
