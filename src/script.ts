@@ -90,6 +90,7 @@ document.addEventListener("submit", function(event) {
   }).then((response) => {
     toggleModal("contact-me-modal-id");
     toggleModal("success-modal-id");
+    console.log(response);
   }).catch((error) => {
     console.error(error);
   });

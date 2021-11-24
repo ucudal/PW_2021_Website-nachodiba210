@@ -76,6 +76,7 @@ document.addEventListener("submit", function (event) {
     }).then(function (response) {
         toggleModal("contact-me-modal-id");
         toggleModal("success-modal-id");
+        console.log(response);
     })["catch"](function (error) {
         console.error(error);
     });
